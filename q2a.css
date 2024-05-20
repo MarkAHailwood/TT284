@@ -3,6 +3,7 @@
   grid-template-columns: 1, 1fr; /* 1 label + 1 input per row, 1 item per column */
 }
 
+/*Styling for buttons div */
 #buttons {
   display: grid;
   grid-template-columns: 2, 1fr; /* Two buttons alongside one another */
