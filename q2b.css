@@ -42,7 +42,7 @@ form {
 /* Styling for all buttons */
 #buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two buttons alongside one another */
+  grid-template-columns: repeat(2, 1fr); /* Two navigation buttons alongside one another */
   grid-gap: 10px; /* Spacing between buttons */
 }
 
