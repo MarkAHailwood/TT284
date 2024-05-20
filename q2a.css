@@ -1,16 +1,51 @@
-#club-event-form {
-  display: grid;
-  grid-template-columns: 1, 1fr; /* 1 label + 1 input per row, 1 item per column */
+/* Tested in Firefox 123 and Chrome 124 */
+
+/* Ensure everything has the same font */
+body,
+input,
+select {
+  font-family: sans-serif;
+  font-size: 1.4rem;
 }
 
-/*Styling for buttons div */
+/*Style the form*/
+form {
+  padding: 0.5rem;
+  /* Use border-box sizing to set width ignoring padding/border */
+  box-sizing: border-box;
+  /* Align form to the left of the page */
+  margin: left;
+  /* Never be wider than the space available */
+  max-width: 100%;
+}
+
+/* An element with class="form-group" containing a label and associated input */
+.form-group {
+  /* Display each label + input on their own line */
+  display: block;
+  /* Spacing between label and input*/
+  margin: 0.5rem;
+}
+
+/* A <label> element inside an element with class="form-group" */
+.form-group label, select, input {
+  /* Display labels inline with inputs */
+  display: inline-block;
+  /* Use border-box sizing to set width ignoring padding/border */
+  box-sizing: border-box;
+  /* Set a minimum width to keep labels and inputs in line vertically */
+  min-width: 20rem;
+  /* Never be wider than the space available */
+  max-width: 100%;
+}
+
+/* Styling for buttons */
 #buttons {
   display: grid;
   grid-template-columns: 2, 1fr; /* Two buttons alongside one another */
   grid-gap: 10px; /* Spacing between buttons */
 }
 
-/* Style for buttons */
 button {
   padding: 10px;
   color: black;
@@ -19,18 +54,15 @@ button {
   cursor: pointer;
 }
 
-/* Style for "Save" button */
 #club-event-form button[type="submit"] {
   background-color: white;
 }
 
-/* Style for "Back" button */
 #back {
   background-color: #f1f1f1;
   border-color: black;
 }
 
-/* Increase border thickness on hover */
 button:hover {
   border-width: 2px;
 }
